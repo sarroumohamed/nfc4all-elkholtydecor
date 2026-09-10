@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-
+​
 <!-- ============================================================
      nfc4all · قالب البطاقة الرقمية (عربي / فرنسي / إنجليزي)
      ==========================================================
@@ -11,105 +11,139 @@
      منطقة التعديل 2 : معلومات العميل CARD      (أسفل هذا القسم)
      لا تلمس أي شيء بعد كلمة END OF EDIT ZONE.
      ============================================================ -->
-
+​
 <!-- ▼▼ منطقة التعديل 1 ▼▼ -->
-<title>El Kholty Decor — بطاقة رقمية</title>
-<meta name="description" content="الخلطي ديكور · الأثاث والديكور الداخلي بطنجة. من الفكرة حتى التنفيذ.">
+<title>Decoration El Ouali — بطاقة رقمية</title>
+<meta name="description" content="مفروشات الوالي · صالونات و تنجيد على المقاس بطنجة.">
 <meta property="og:type" content="website">
-<meta property="og:title" content="El Kholty Decor — ديكور و أثاث · طنجة">
-<meta property="og:description" content="الأثاث والديكور الداخلي بطنجة — WhatsApp، Instagram، Threads، TikTok، Facebook والموقع في بطاقة واحدة.">
+<meta property="og:title" content="Decoration El Ouali — مفروشات و تنجيد · طنجة">
+<meta property="og:description" content="صالونات مغربية وعصرية على المقاس، ستائر و ديكور داخلي بطنجة — معرض أعمال كامل.">
 <!-- ضع هنا رابط الصورة كاملاً بعد رفع المجلد على GitHub Pages -->
-<meta property="og:image" content="https://USERNAME.github.io/nfc4all/clients/elkholty-decor/img/cover.png">
-<link rel="icon" href="img/logo.png">
-<link rel="apple-touch-icon" href="img/logo.png">
+<meta property="og:image" content="https://USERNAME.github.io/nfc4all/clients/decoration-el-ouali/cover.png">
+<link rel="icon" href="logo.png">
+<link rel="apple-touch-icon" href="logo.png">
 <!-- ▲▲ نهاية منطقة التعديل 1 ▲▲ -->
-
+​
 <script>
 /* ▼▼ منطقة التعديل 2 — كل معلومات العميل هنا فقط ▼▼
    • أي حقل لا تريده: اتركه "" وسيختفي تلقائياً من الصفحة.
    • كل نص مكتوب ثلاث مرات: ar (عربي) · fr (فرنسي) · en (إنجليزي).
 */
 var CARD = {
-
+​
   /* --- الهوية البصرية --- */
-  accent   : "#B0762C",          // لون العميل الأساسي (نحاسي/ذهبي مأخوذ من البطاقة المطبوعة)
-  cover    : "img/cover.png",    // صورة الغلاف (عرضية 1200×600)
-  logo     : "img/logo.png",     // الشعار (مربعة 400×400)
+  accent   : "#B3252B",          // أحمر البطاقة · للأزرق استعمل "#1B3E8B"
+  cover    : "cover.mp4",        // فيديو أو صورة الغلاف (mp4/webm أو png/jpg)
+  coverPoster: "",               // صورة تبان قبل ما يتحمل الفيديو (اختياري)
+  logo     : "logo.png",     // الشعار (مربعة 400×400)
   logoShape: "square",           // "square" للمحلات · "circle" للأشخاص
-
+​
   /* --- الحركة --- */
-  motion   : true,               // true = حركات هادئة عند فتح الصفحة · false = بدون أي حركة
-
+  motion   : true,               // true = حركات هادئة · false = بدون أي حركة
+​
   /* --- اللغات --- */
-  defaultLang   : "ar",          // اللغة التي تفتح بها البطاقة: "ar" أو "fr" أو "en"
-  autoDetectLang: true,          // true = تفتح بلغة هاتف الزائر إن كانت مدعومة
-
+  defaultLang   : "ar",
+  autoDetectLang: true,
+​
   /* --- الاسم والوصف --- */
-  name   : { ar:"الخلطي ديكور",   fr:"El Kholty Decor", en:"El Kholty Decor" },
-  role   : { ar:"ديكور و أثاث",    fr:"Décoration & Ameublement", en:"Decoration & Furniture" },
-  tagline: { ar:"طنجة · كازابراطا", fr:"Tanger · Casabarata", en:"Tangier · Casabarata" },
+  name   : { ar:"مفروشات الوالي", fr:"Decoration El Ouali", en:"Decoration El Ouali" },
+  role   : { ar:"تنجيد و ديكور · على المقاس", fr:"Tapissier Générale · Décoration", en:"Upholstery & interior decoration" },
+  tagline: { ar:"طنجة · حي البرانص 2", fr:"Tanger · Branes 2", en:"Tangier · Branes 2" },
   about  : {
-    ar:"الخلطي ديكور محل متخصص فـ الأثاث والديكور الداخلي بطنجة. من الفكرة حتى التنفيذ، كنعاونوك تختار القطع والألوان اللي مناسبين لدارك ولا لمشروعك — بجودة عالية وبأفضل ثمن. بإدارة فنية من معاد الخلطي.",
-    fr:"El Kholty Decor est spécialisé dans le mobilier et la décoration d'intérieur à Tanger. De l'idée jusqu'à la réalisation, nous vous aidons à choisir les pièces et les couleurs qui conviennent à votre maison ou à votre projet — haute qualité au meilleur prix. Direction artistique : Mouad El Kholty.",
-    en:"El Kholty Decor specialises in furniture and interior decoration in Tangier. From the first idea to the final installation, we help you choose the pieces and colours that suit your home or your project — high quality at the best price. Art direction by Mouad El Kholty."
+    ar:"كنصنعو ليك الصالون اللي ف بالك، ماشي اللي كنلقاو ف السوق. من اختيار القماش والخشب حتى التركيب ف دارك، كلشي كيتدار على المقاس وبيد صنايعية كيعرفو خدمتهم.",
+    fr:"Nous fabriquons le salon que vous avez en tête, pas celui qu'on trouve déjà sur le marché. Du choix du tissu et du bois jusqu'à l'installation chez vous, tout est fait sur mesure, par des artisans qui maîtrisent leur métier.",
+    en:"We build the living room you have in mind, not the one already sitting in the shops. From choosing the fabric and the wood to installing it in your home, everything is made to measure by craftsmen who know their trade."
   },
-
+​
   /* --- أزرار التواصل (اتركها "" لإخفائها) --- */
-  phone      : "+212661348521",
-  whatsapp   : "212661348521",              // بدون + وبدون أصفار
+  phone      : "+212668500602",
+  phone2     : "",              // الرقم الثاني إن أردت: "+212674618375"
+  phone2Label: { ar:"اتصال 2", fr:"Appeler 2", en:"Call 2" },
+  whatsapp   : "212668500602",
   whatsappMsg: {
-    ar:"السلام، بغيت معلومات على الديكور و الأثاث.",
-    fr:"Bonjour, je souhaite des informations sur la décoration et le mobilier.",
-    en:"Hello, I would like information about your decoration and furniture."
+    ar:"السلام، بغيت معلومات على الصالونات و التنجيد.",
+    fr:"Bonjour, je souhaite des informations sur vos salons et travaux de tapisserie.",
+    en:"Hello, I would like information about your sofas and upholstery work."
   },
-  maps      : "https://maps.app.goo.gl/ho2RgXyinLB9RiCc6",
-  facebook  : "https://web.facebook.com/people/El-kholty-D%C3%A8c%C3%B5r/100068251163556/",
-  instagram : "https://www.instagram.com/elkholty_decor/",
-  threads   : "https://www.threads.com/@elkholty_decor?xmt=AQG0Mt7z0H1Y1GKIuIFbiDggfUUJGRlYbpjNGlvB9kwiYN8",
-  tiktok    : "https://www.tiktok.com/@elkholty_decor",
-  review    : "",   // رابط تقييم Google — ضعه هنا إذا توفر
-  email     : "",
+  maps      : "",   // ضع هنا رابط Google Maps عندما يصلك — الزر يظهر تلقائياً
+  facebook  : "https://web.facebook.com/profile.php?id=100078720046326&locale=fr_FR",
+  instagram : "https://www.instagram.com/decorationelouali/",
+  threads   : "",
+  tiktok    : "",
+  review    : "",
+  email     : "sghirelouali7@gmail.com",
   website   : "",
-
-  /* --- روابط إضافية اختيارية (كاطالوغ، حجز موعد…) --- */
+​
+  /* --- روابط إضافية اختيارية --- */
   extraLinks: [
     // { icon:"globe", url:"https://…", label:{ ar:"كاطالوغ", fr:"Catalogue", en:"Catalogue" } }
   ],
-
+​
   /* --- الخدمات (بدون أثمنة) --- */
   services: [
-    { label:{ ar:"ديكور داخلي",                       fr:"Décoration d'intérieur",        en:"Interior decoration" } },
-    { label:{ ar:"أثاث على المقاس",                    fr:"Meubles sur mesure",            en:"Custom-made furniture" } },
-    { label:{ ar:"صالونات مغربية و عصرية",             fr:"Salons marocains & modernes",   en:"Moroccan & modern living rooms" } },
-    { label:{ ar:"ستائر و تنجيد",                      fr:"Rideaux & tapisserie",          en:"Curtains & upholstery" } },
-    { label:{ ar:"إضاءة و ديكور الحوائط",              fr:"Luminaires & décoration murale", en:"Lighting & wall decor" } },
-    { label:{ ar:"استشارة و تنفيذ من الفكرة حتى التسليم", fr:"Conseil & réalisation clé en main", en:"Consultation & turnkey delivery" } }
+    { label:{ ar:"صالونات مغربية وعصرية على المقاس", fr:"Salons marocains & modernes sur mesure", en:"Moroccan & modern sofas, made to measure" } },
+    { label:{ ar:"ستائر وتنسيق النوافذ",           fr:"Rideaux & habillage de fenêtres",      en:"Curtains & window dressing" } },
+    { label:{ ar:"غرف نوم ورؤوس نموسيات مكبّسة (capitonné)", fr:"Chambres & têtes de lit capitonnées", en:"Bedrooms & capitonné headboards" } },
+    { label:{ ar:"تجديد وإعادة تنجيد الأثاث القديم", fr:"Rénovation & réfection de meubles",      en:"Restoring & reupholstering old furniture" } },
+    { label:{ ar:"ديكور داخلي وتنسيق الفضاء",      fr:"Décoration intérieure & aménagement",   en:"Interior decoration & space planning" } }
   ],
-
-  /* --- معرض الأعمال (3 أو 6 صور مربعة) --- */
-  gallery: [ "img/work1.png", "img/work2.jfif", "img/work3.jpeg" ],
-
-  /* --- أوقات العمل --- */
-  hours: [
-    // فارغة الآن → يظهر العنوان فقط. لإضافتها:
-    // { time:"09:00 – 20:00", label:{ ar:"الاثنين – السبت", fr:"Lundi – Samedi", en:"Mon – Sat" } },
-    // { time:"10:00 – 14:00", label:{ ar:"الأحد",           fr:"Dimanche",       en:"Sunday" } }
+​
+  /* --- معرض الأعمال — صور كبيرة واحدة تحت الأخرى ---
+     ضع كل الصور داخل مجلد img/ بنفس الأسماء.
+     لحذف صورة: امسح سطرها · لتغيير الترتيب: حرّك الأسطر --- */
+  gallery: [
+    "WhatsApp Image 2026-09-08 at 6.11.45 PM (1).jpeg",
+    "WhatsApp Image 2026-09-08 at 6.11.45 PM (2).jpeg",
+    "WhatsApp Image 2026-09-08 at 6.11.45 PM (3).jpeg",
+    "WhatsApp Image 2026-09-08 at 6.11.45 PM (4).jpeg",
+    "WhatsApp Image 2026-09-08 at 6.11.46 PM (1).jpeg",
+    "WhatsApp Image 2026-09-08 at 6.11.46 PM (2).jpeg",
+    "WhatsApp Image 2026-09-08 at 6.11.46 PM (3).jpeg",
+    "WhatsApp Image 2026-09-08 at 6.11.46 PM (4).jpeg",
+    "WhatsApp Image 2026-09-08 at 6.11.46 PM (5).jpeg",
+    "WhatsApp Image 2026-09-08 at 6.11.46 PM (6).jpeg",
+    "WhatsApp Image 2026-09-08 at 6.11.46 PM (7).jpeg",
+    "WhatsApp Image 2026-09-08 at 6.11.46 PM (8).jpeg",
+    "WhatsApp Image 2026-09-08 at 6.11.46 PM.jpeg",
+    "WhatsApp Image 2026-09-08 at 6.11.47 PM (3).jpeg",
+    "WhatsApp Image 2026-09-08 at 6.11.47 PM (4).jpeg",
+    "WhatsApp Image 2026-09-08 at 6.11.47 PM (6).jpeg",
+    "WhatsApp Image 2026-09-08 at 6.11.48 PM (1).jpeg",
+    "WhatsApp Image 2026-09-08 at 6.11.48 PM (2).jpeg",
+    "WhatsApp Image 2026-09-08 at 6.11.48 PM (3).jpeg",
+    "WhatsApp Image 2026-09-08 at 6.11.48 PM (4).jpeg",
+    "WhatsApp Image 2026-09-08 at 6.11.48 PM (6).jpeg",
+    "WhatsApp Image 2026-09-08 at 6.11.48 PM (7).jpeg",
+    "WhatsApp Image 2026-09-08 at 6.11.48 PM.jpeg",
+    "WhatsApp Image 2026-09-08 at 6.11.49 PM (1).jpeg",
+    "WhatsApp Image 2026-09-08 at 6.11.49 PM (2).jpeg",
+    "1.png",
+    "WhatsApp Image 2026-09-08 at 6.11.49 PM (4).jpeg",
+    "2.png",
+    "3.png",
+    "4.png",
+    "5.png",
+    "6.png",
+    "7.png"
   ],
+​
+  /* --- أوقات العمل: محذوفة حسب الطلب --- */
+  hours: [],
   address: {
-    ar:"سوق الحي الجديد رقم 1156 مكرر، كازابراطا — طنجة",
-    fr:"Souk Al Hay Al Jadid N°1156 bis, Casabarata — Tanger",
-    en:"Souk Al Hay Al Jadid No. 1156 bis, Casabarata — Tangier"
+    ar:"حي البرانص 2، شارع حمادي أمزيان رقم 66 — طنجة",
+    fr:"Hay Branes 2, Avenue Hammadi Amziane N° 66 — Tanger",
+    en:"Hay Branes 2, Hammadi Amziane Avenue No. 66 — Tangier"
   },
-
+​
   /* --- بطاقة جهة الاتصال التي تُحفظ في الهاتف --- */
-  vcard: { firstName:"Mouad", lastName:"El Kholty", org:"El Kholty Decor", title:"Art Director", city:"Tanger", country:"Maroc" },
-
+  vcard: { firstName:"Decoration", lastName:"El Ouali", org:"Decoration El Ouali", title:"Tapissier Générale", city:"Tanger", country:"Maroc" },
+​
   /* --- توقيعك أنت (لا تغيّره) --- */
-  brand: { name:"nfc4all", url:"https://instagram.com/nfc4all" }
+  brand: { name:"Tap Nfc", url:"https://www.instagram.com/nfc.4all" }
 };
 /* ▲▲ نهاية منطقة التعديل 2 — END OF EDIT ZONE ▲▲ */
 </script>
-
+​
 <style>
 *,::before,::after{box-sizing:border-box}
 html,body{margin:0;padding:0}
@@ -146,14 +180,18 @@ body{
 img{max-width:100%}
 a{color:inherit}
 :focus-visible{outline:3px solid var(--accent);outline-offset:2px;border-radius:6px}
-
+​
 /* ---- الغلاف ومبدّل اللغة ---- */
 .cover{position:relative;aspect-ratio:16/8;background:var(--soft2);overflow:hidden}
-.cover>img{width:100%;height:100%;object-fit:cover;display:block}
+.cover>img,.cover>video{width:100%;height:100%;object-fit:cover;display:block}
+.cover>video{background:#000}
+.cover.empty{display:none}
+img.imgfail{opacity:0}
+.gallery button.failed{display:none}
 .langs{position:absolute;top:12px;inset-inline-end:12px;display:flex;gap:2px;padding:4px;border-radius:999px;background:rgba(12,12,12,.55);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);z-index:3}
 .langs button{min-width:48px;height:40px;border:0;border-radius:999px;background:transparent;color:#fff;font:600 14px/1 inherit;cursor:pointer;padding:0;transition:background .25s,color .25s}
 .langs button[aria-pressed="true"]{background:#fff;color:#111}
-
+​
 /* ---- الرأس ---- */
 .head{padding:0 20px 4px;text-align:center;position:relative;z-index:2}
 .avatar{width:96px;height:96px;object-fit:cover;display:block;margin:-52px auto 14px;border:4px solid var(--surface);background:var(--soft2);box-shadow:var(--shadow);border-radius:22px}
@@ -162,7 +200,7 @@ a{color:inherit}
 .head h1{margin:0;font-size:23px;line-height:1.25;font-weight:700;letter-spacing:-.01em}
 .head .role{margin:6px 0 0;font-size:15px;font-weight:600;color:var(--accent)}
 .head .tag{margin:4px 0 0;font-size:14.5px;color:var(--muted)}
-
+​
 /* ---- الأزرار ---- */
 .cta{padding:20px 20px 0}
 .btn{position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center;gap:10px;width:100%;min-height:54px;padding:0 16px;border:0;border-radius:12px;background:var(--accent);color:#fff;font:600 16px/1 inherit;text-decoration:none;cursor:pointer;font-family:inherit;box-shadow:var(--btn-shadow);transition:transform .18s ease}
@@ -174,7 +212,7 @@ a{color:inherit}
 .action .lbl{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .action:active{transform:scale(.98)}
 .action:last-child:nth-child(odd){grid-column:1 / -1;justify-content:center}
-
+​
 /* ---- ألوان المنصات الحقيقية على الأزرار ---- */
 .action.brand{color:#fff;border-color:transparent;box-shadow:var(--btn-shadow);text-shadow:0 1px 1px rgba(0,0,0,.14)}
 .action.brand svg{color:#fff}
@@ -188,7 +226,7 @@ a{color:inherit}
 .action.tel{background:linear-gradient(135deg,rgba(255,255,255,.16),rgba(0,0,0,.16)),var(--accent)}
 .action.mail{background:linear-gradient(135deg,#6B7280 0%,#4B5563 55%,#374151 100%)}
 .action.web{background:linear-gradient(135deg,#475569 0%,#334155 55%,#1E293B 100%)}
-
+​
 /* ---- الأقسام ---- */
 .sec{padding:26px 20px 0}
 .sec h2{margin:0 0 12px;font-size:13px;font-weight:700;color:var(--muted)}
@@ -204,18 +242,20 @@ html[dir="ltr"] .sec h2{letter-spacing:.09em;text-transform:uppercase}
 .panel .t{font-weight:600;white-space:nowrap;font-variant-numeric:tabular-nums}
 .addr{display:flex;align-items:flex-start;gap:10px;margin-top:12px;font-size:15px;color:var(--muted);text-decoration:none}
 .addr svg{width:19px;height:19px;flex:0 0 19px;color:var(--accent);margin-top:2px}
-.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:7px}
-.gallery button{padding:0;border:0;background:var(--soft2);border-radius:10px;overflow:hidden;aspect-ratio:1;cursor:pointer;display:block;transition:transform .2s ease}
-.gallery button:active{transform:scale(.97)}
-.gallery img{width:100%;height:100%;object-fit:cover;display:block}
-
+/* معرض بصور كبيرة — صورة واحدة في كل صف */
+.gallery{display:grid;grid-template-columns:1fr;gap:16px}
+.gallery button{padding:0;border:0;background:var(--soft2);border-radius:16px;overflow:hidden;cursor:pointer;display:block;width:100%;box-shadow:var(--btn-shadow);transition:transform .25s ease;-webkit-tap-highlight-color:transparent}
+.gallery button:active{transform:scale(.985)}
+.gallery img{width:100%;height:auto;display:block}
+.gcount{margin:-2px 0 12px;font-size:13.5px;color:var(--muted)}
+​
 /* ---- المشاركة والتذييل ---- */
 .share{display:flex;align-items:center;justify-content:center;gap:9px;width:100%;min-height:50px;margin-top:8px;border:1px solid var(--border);border-radius:12px;background:transparent;color:var(--text);font:600 15px/1 inherit;cursor:pointer;font-family:inherit;transition:transform .18s ease}
 .share:active{transform:scale(.985)}
 .share svg{width:19px;height:19px}
 .foot{padding:26px 20px 34px;text-align:center;font-size:13px;color:var(--muted)}
 .foot a{color:var(--muted);font-weight:700;text-decoration:none;border-bottom:1px solid var(--border)}
-
+​
 /* ---- التنبيه والمعرض المكبّر ---- */
 .toast{position:fixed;inset-inline:0;bottom:24px;margin:0 auto;width:max-content;max-width:88%;padding:12px 20px;border-radius:999px;background:#2C2C2B;color:#fff;font-size:14.5px;font-weight:600;opacity:0;transform:translateY(10px);transition:opacity .2s,transform .2s;pointer-events:none;z-index:60}
 .toast.on{opacity:1;transform:translateY(0)}
@@ -223,7 +263,7 @@ html[dir="ltr"] .sec h2{letter-spacing:.09em;text-transform:uppercase}
 .lb.on{display:flex}
 .lb img{max-width:94vw;max-height:84vh;border-radius:12px}
 .lb .x{position:absolute;top:14px;inset-inline-end:14px;width:44px;height:44px;border:0;border-radius:50%;background:rgba(255,255,255,.16);color:#fff;font-size:24px;line-height:1;cursor:pointer}
-
+​
 /* ============================================================
    الحركات — هادئة ومريحة للعين
    ============================================================ */
@@ -233,29 +273,36 @@ html[dir="ltr"] .sec h2{letter-spacing:.09em;text-transform:uppercase}
 @keyframes ringPulse{0%{box-shadow:0 0 0 0 rgba(37,211,102,.42)}70%{box-shadow:0 0 0 15px rgba(37,211,102,0)}100%{box-shadow:0 0 0 0 rgba(37,211,102,0)}}
 @keyframes sheen{0%{transform:translateX(-150%) skewX(-18deg)}100%{transform:translateX(320%) skewX(-18deg)}}
 @keyframes fadeSwap{from{opacity:0}to{opacity:1}}
-
+​
 .anim .rise{opacity:0;animation:riseIn .62s cubic-bezier(.22,.68,.32,1) forwards;animation-delay:var(--d,0ms)}
 /* أمان: إن لم تعمل الحركة لأي سبب، يبقى المحتوى مرئياً دائماً */
 .anim.done .rise{opacity:1!important;animation:none!important;transform:none!important}
 .anim .avatar{animation:popIn .74s cubic-bezier(.2,.8,.25,1) .10s both}
-.anim .cover>img{animation:coverIn 1.5s cubic-bezier(.2,.7,.3,1) both}
-
+.anim .cover>img,.anim .cover>video{animation:coverIn 1.5s cubic-bezier(.2,.7,.3,1) both}
+​
 /* نبضة خفيفة جداً على زر الواتساب لجذب النظر بلطف */
 .anim .action.wa::after{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;animation:ringPulse 4.2s ease-out 2s infinite}
 /* لمعة ناعمة تمر على الزر الرئيسي كل بضع ثوانٍ */
 .anim .btn::after{content:"";position:absolute;top:0;bottom:0;inset-inline-start:0;width:34%;pointer-events:none;background:linear-gradient(90deg,transparent,rgba(255,255,255,.34),transparent);transform:translateX(-150%) skewX(-18deg);animation:sheen 6s ease-in-out 2.4s infinite}
-
+​
 /* ظهور تدريجي للأقسام أثناء التمرير */
 .anim .reveal{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s cubic-bezier(.22,.68,.32,1)}
 .anim .reveal.in{opacity:1;transform:none}
-
+​
+/* ظهور أنعم وأطول لصور المعرض مع تقريب خفيف يهدأ تدريجياً */
+.anim .gallery .reveal{opacity:0;transform:translateY(34px) scale(.965);transition:opacity .85s ease,transform .95s cubic-bezier(.22,.68,.32,1)}
+.anim .gallery .reveal.in{opacity:1;transform:none}
+.anim .gallery .reveal img{transform:scale(1.08);transition:transform 1.35s cubic-bezier(.2,.7,.3,1)}
+.anim .gallery .reveal.in img{transform:none}
+​
 /* تبديل اللغة بانتقال ناعم بدل قفزة */
 .swap{animation:fadeSwap .34s ease both}
-
+​
 @media (prefers-reduced-motion: reduce){
   *{transition:none!important}
-  .anim .rise,.anim .avatar,.anim .cover>img,.swap{animation:none!important;opacity:1!important;transform:none!important}
+  .anim .rise,.anim .avatar,.anim .cover>img,.anim .cover>video,.swap{animation:none!important;opacity:1!important;transform:none!important}
   .anim .reveal{opacity:1!important;transform:none!important;transition:none!important}
+  .anim .gallery .reveal,.anim .gallery .reveal img{opacity:1!important;transform:none!important;transition:none!important}
   .anim .action.wa::after,.anim .btn::after{animation:none!important;display:none!important}
 }
 </style>
@@ -264,36 +311,36 @@ html[dir="ltr"] .sec h2{letter-spacing:.09em;text-transform:uppercase}
 <main class="card" id="card"></main>
 <div class="lb" id="lb"><button class="x" id="lbx" aria-label="Close">×</button><img id="lbi" alt=""></div>
 <div class="toast" id="toast" role="status"></div>
-
+​
 <noscript>
   <div style="max-width:480px;margin:0 auto;padding:24px;font-family:sans-serif">
-    <h1>El Kholty Decor</h1>
-    <p><a href="tel:+212661348521">+212 661 34 85 21</a></p>
-    <p><a href="https://wa.me/212661348521">WhatsApp</a></p>
+    <h1>Decoration El Ouali</h1>
+    <p><a href="tel:+212668500602">+212 668 50 06 02</a></p>
+    <p><a href="https://wa.me/212668500602">WhatsApp</a></p>
   </div>
 </noscript>
-
+​
 <script>
 /* =======  المحرّك — لا تعدّل تحت هذا السطر  ======= */
 (function(){
 "use strict";
-
+​
 /* نصوص الواجهة بالثلاث لغات */
 var UI = {
-  ar:{ save:"حفظ جهة الاتصال", wa:"واتساب", call:"اتصال", maps:"الموقع", ig:"إنستغرام", fb:"فيسبوك", tt:"تيك توك", th:"Threads", location:"العنوان",
+  ar:{ save:"حفظ جهة الاتصال", wa:"واتساب", call:"اتصال", call2:"اتصال 2", maps:"الموقع", ig:"إنستغرام", fb:"فيسبوك", tt:"تيك توك", th:"Threads", location:"العنوان",
        review:"قيّمنا على Google", mail:"البريد", web:"الموقع الإلكتروني",
        about:"نبذة", services:"خدماتنا", work:"معرض الأعمال", hours:"أوقات العمل",
        share:"مشاركة البطاقة", copied:"تم نسخ الرابط ✓", by:"بطاقة رقمية من" },
-  fr:{ save:"Enregistrer le contact", wa:"WhatsApp", call:"Appeler", maps:"Itinéraire", ig:"Instagram", fb:"Facebook", tt:"TikTok", th:"Threads", location:"Adresse",
+  fr:{ save:"Enregistrer le contact", wa:"WhatsApp", call:"Appeler", call2:"Appeler 2", maps:"Itinéraire", ig:"Instagram", fb:"Facebook", tt:"TikTok", th:"Threads", location:"Adresse",
        review:"Avis Google", mail:"E-mail", web:"Site web",
        about:"À propos", services:"Nos services", work:"Nos réalisations", hours:"Horaires",
        share:"Partager la carte", copied:"Lien copié ✓", by:"Carte numérique par" },
-  en:{ save:"Save contact", wa:"WhatsApp", call:"Call", maps:"Directions", ig:"Instagram", fb:"Facebook", tt:"TikTok", th:"Threads", location:"Address",
+  en:{ save:"Save contact", wa:"WhatsApp", call:"Call", call2:"Call 2", maps:"Directions", ig:"Instagram", fb:"Facebook", tt:"TikTok", th:"Threads", location:"Address",
        review:"Review us on Google", mail:"Email", web:"Website",
        about:"About", services:"Our services", work:"Our work", hours:"Opening hours",
        share:"Share card", copied:"Link copied ✓", by:"Digital card by" }
 };
-
+​
 var S="stroke='currentColor' fill='none' stroke-width='1.9' stroke-linecap='round' stroke-linejoin='round'";
 var ICON = {
   save:"<svg viewBox='0 0 24 24' aria-hidden='true'><g "+S+"><path d='M16 21v-2a4 4 0 0 0-4-4H7a4 4 0 0 0-4 4v2'/><circle cx='9.5' cy='7' r='4'/><path d='M19 8v6M22 11h-6'/></g></svg>",
@@ -310,13 +357,13 @@ var ICON = {
   clock:"<svg viewBox='0 0 24 24' aria-hidden='true'><g "+S+"><circle cx='12' cy='12' r='9.2'/><path d='M12 6.8V12l3.4 2'/></g></svg>",
   share:"<svg viewBox='0 0 24 24' aria-hidden='true'><g "+S+"><path d='M4 12.5V19a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-6.5'/><path d='M15.5 6 12 2.6 8.5 6'/><path d='M12 3v12'/></g></svg>"
 };
-
+​
 var C = window.CARD, LANGS = ["ar","fr","en"], LABELS = {ar:"ع", fr:"FR", en:"EN"};
 var lang = pickLang();
 var firstPaint = true;
 var MOTION = (C.motion !== false);
 var io = null;
-
+​
 function pickLang(){
   var q = (location.search.match(/[?&]lang=(ar|fr|en)/i) || [])[1];      // رابط مباشر بلغة محددة: …/?lang=fr
   if(q) return q.toLowerCase();
@@ -329,44 +376,105 @@ function pickLang(){
 }
 function t(v){ if(!v) return ""; return typeof v === "string" ? v : (v[lang] || v.ar || v.fr || v.en || ""); }
 function esc(s){ return String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;"); }
-
+​
 /* مساعدات الحركة: تضيف كلاس التأثير مع تأخير متسلسل */
 function riseAttr(delay){ return MOTION ? ' class="rise" style="--d:'+delay+'ms"' : ''; }
 function riseOn(cls, delay){ return MOTION ? ' class="'+cls+' rise" style="--d:'+delay+'ms"' : ' class="'+cls+'"'; }
 function revealOn(cls){ return MOTION ? ' class="'+cls+' reveal"' : ' class="'+cls+'"'; }
-
+/* يسمح بأسماء ملفات فيها مسافات أو أقواس أو حروف عربية */
+function srcU(p){ return esc(encodeURI(String(p))); }
+​
+/* هل الغلاف فيديو؟ */
+function isVideoFile(p){ return /\.(mp4|webm|mov|m4v|ogv)(\?.*)?$/i.test(String(p||"")); }
+​
+/* ---- إصلاح مسارات الصور تلقائياً ----
+   المتصفح يجرب بالترتيب: نفس المجلد · img/ · images/ · تغيير jpeg/jpg · حروف كبيرة
+   فلو كانت الصور فمجلد img/ أو جنب index.html — فالحالتين كيخدمو */
+var IMGALTS = [], imgFails = 0, failTimer = null;
+var DEBUG = /[?&]debug=1/.test(location.search);
+​
+function altPaths(p){
+  var s = String(p || ""), out = [];
+  function add(x){ if(x && out.indexOf(x) < 0) out.push(x); }
+  var bare = s.replace(/^(?:\.\/)?(?:img|images|photos|assets)\//i, "");
+  [s, bare, "img/" + bare, "images/" + bare].forEach(function(b){
+    add(b);
+    var m = b.match(/^(.*)\.([A-Za-z0-9]+)$/);
+    if(!m) return;
+    var stem = m[1], ext = m[2].toLowerCase();
+    var swap = { jpeg:["jpg","JPEG","JPG"], jpg:["jpeg","JPG","JPEG"], png:["PNG"], webp:["WEBP"] };
+    (swap[ext] || []).forEach(function(e){ add(stem + "." + e); });
+  });
+  return out;
+}
+​
+/* يبني وسم <img> مع محاولات احتياطية */
+function imgTag(p, attrs){
+  var alts = altPaths(p);
+  var id = IMGALTS.push(alts) - 1;
+  return '<img src="' + esc(encodeURI(alts[0])) + '" data-alts="' + id + '" data-step="0" onerror="__imgFix(this)" ' + (attrs || "") + '>';
+}
+​
+window.__imgFix = function(el){
+  var alts = IMGALTS[+el.getAttribute("data-alts")] || [];
+  var step = (+el.getAttribute("data-step") || 0) + 1;
+  if(step < alts.length){
+    el.setAttribute("data-step", step);
+    el.src = encodeURI(alts[step]);
+    return;
+  }
+  el.removeAttribute("onerror");
+  el.className += " imgfail";
+  var b = el.parentNode;
+  if(b && b.tagName === "BUTTON") b.className += " failed";
+  imgFails++;
+  if(window.console) console.warn("[card] صورة ما تلقاتش / image not found:", alts[0]);
+  if(DEBUG){
+    clearTimeout(failTimer);
+    failTimer = setTimeout(function(){ toast(imgFails + " ملف ما تلقاش — شوف Console"); }, 900);
+  }
+};
+​
 function render(){
   var u = UI[lang], html = "";
   document.documentElement.lang = lang;
   document.documentElement.dir  = (lang === "ar") ? "rtl" : "ltr";
   document.title = t(C.name) + " — " + t(C.role);
-
+​
   /* الغلاف + مبدّل اللغة */
   html += '<div class="cover">';
-  if(C.cover) html += '<img src="'+esc(C.cover)+'" alt="" fetchpriority="high">';
+  if(C.cover){
+    if(isVideoFile(C.cover)){
+      var pos = C.coverPoster ? ' poster="'+srcU(C.coverPoster)+'"' : '';
+      html += '<video src="'+srcU(C.cover)+'"'+pos+' autoplay muted loop playsinline webkit-playsinline preload="auto" disablepictureinpicture></video>';
+    } else {
+      html += imgTag(C.cover, 'alt="" fetchpriority="high"');
+    }
+  }
   html += '<div class="langs" role="group" aria-label="Language">';
   LANGS.forEach(function(l){
     html += '<button type="button" data-lang="'+l+'" aria-pressed="'+(l===lang)+'" lang="'+l+'">'+LABELS[l]+'</button>';
   });
   html += '</div></div>';
-
+​
   /* الرأس */
   html += '<div class="head">';
   var shape = C.logoShape === "circle" ? " circle" : "";
-  if(C.logo) html += '<img class="avatar'+shape+'" src="'+esc(C.logo)+'" alt="">';
+  if(C.logo) html += imgTag(C.logo, 'class="avatar'+shape+'" alt=""');
   else       html += '<div class="avatar mono'+shape+'">'+esc(t(C.name).trim().charAt(0))+'</div>';
   html += '<h1'+riseAttr(170)+'>'+esc(t(C.name))+'</h1>';
   if(t(C.role))    html += '<p'+riseOn("role",220)+'>'+esc(t(C.role))+'</p>';
   if(t(C.tagline)) html += '<p'+riseOn("tag",260)+'>'+esc(t(C.tagline))+'</p>';
   html += '</div>';
-
+​
   /* الزر الرئيسي */
   html += '<div class="cta"><button'+riseOn("btn",320)+' id="vcf" type="button">'+ICON.save+'<span>'+esc(u.save)+'</span></button></div>';
-
+​
   /* شبكة الأزرار — كل منصة بلونها */
   var acts = [];
   if(C.whatsapp) acts.push({i:"wa",  c:"wa",   l:u.wa,     h:"https://wa.me/"+C.whatsapp+(t(C.whatsappMsg)?"?text="+encodeURIComponent(t(C.whatsappMsg)):""), x:1});
   if(C.phone)    acts.push({i:"call",c:"tel",  l:u.call,   h:"tel:"+C.phone});
+  if(C.phone2)   acts.push({i:"call",c:"tel",  l:(t(C.phone2Label)||u.call2), h:"tel:"+C.phone2});
   if(C.maps)     acts.push({i:"pin", c:"maps", l:u.maps,   h:C.maps, x:1});
   if(C.facebook) acts.push({i:"fb",  c:"fb",   l:u.fb,     h:C.facebook, x:1});
   if(C.instagram)acts.push({i:"ig",  c:"ig",   l:u.ig,     h:C.instagram, x:1});
@@ -376,7 +484,7 @@ function render(){
   if(C.website)  acts.push({i:"globe",c:"web", l:u.web,    h:C.website, x:1});
   (C.extraLinks||[]).forEach(function(e){ if(e && e.url) acts.push({i:e.icon||"globe", c:"web", l:t(e.label), h:e.url, x:1}); });
   if(C.review)   acts.push({i:"star",c:"star", l:u.review, h:C.review, x:1});
-
+​
   if(acts.length){
     html += '<div class="actions">';
     acts.forEach(function(a, idx){
@@ -386,10 +494,10 @@ function render(){
     });
     html += '</div>';
   }
-
+​
   /* نبذة */
   if(t(C.about)) html += '<section'+revealOn("sec")+'><h2>'+esc(u.about)+'</h2><p class="about">'+esc(t(C.about))+'</p></section>';
-
+​
   /* الخدمات */
   if(C.services && C.services.length){
     html += '<section'+revealOn("sec")+'><h2>'+esc(u.services)+'</h2><div class="list">';
@@ -398,16 +506,18 @@ function render(){
     });
     html += '</div></section>';
   }
-
+​
   /* المعرض */
   if(C.gallery && C.gallery.length){
     html += '<section'+revealOn("sec")+'><h2>'+esc(u.work)+'</h2><div class="gallery">';
-    C.gallery.forEach(function(g){
-      html += '<button type="button" data-img="'+esc(g)+'" aria-label="'+esc(u.work)+'"><img src="'+esc(g)+'" alt="" loading="lazy"></button>';
+    C.gallery.forEach(function(g, i){
+      var gc = MOTION ? ' class="reveal"' : '';
+      var eager = i < 2 ? '' : ' loading="lazy"';
+      html += '<button type="button"'+gc+' aria-label="'+esc(u.work)+' '+(i+1)+'">'+imgTag(g, 'alt=""'+eager+' decoding="async"')+'</button>';
     });
     html += '</div></section>';
   }
-
+​
   /* الأوقات + العنوان */
   if((C.hours && C.hours.length) || t(C.address)){
     var hasHours = !!(C.hours && C.hours.length);
@@ -425,30 +535,41 @@ function render(){
     }
     html += '</section>';
   }
-
+​
   /* مشاركة + تذييل */
   html += '<div'+revealOn("sec")+'><button class="share" id="shr" type="button">'+ICON.share+'<span>'+esc(u.share)+'</span></button></div>';
   html += '<div'+revealOn("foot")+'>'+esc(u.by)+' <a href="'+esc(C.brand.url)+'" target="_blank" rel="noopener">'+esc(C.brand.name)+'</a></div>';
-
+​
   var cardEl = document.getElementById("card");
   cardEl.className = "card" + (MOTION ? " anim" : "");
   cardEl.innerHTML = html;
-
+​
   if(MOTION && !firstPaint){
     cardEl.classList.add("swap");
     setTimeout(function(){ cardEl.classList.remove("swap"); }, 400);
   }
   firstPaint = false;
-
+​
   if(MOTION){
     cardEl.classList.remove("done");
     setTimeout(function(){ cardEl.classList.add("done"); }, 2800);
   }
-
+​
   bind();
   observeReveals();
+​
+  /* دفعة صغيرة لتشغيل فيديو الغلاف + إخفاء الغلاف إلا فشل */
+  var vid = cardEl.querySelector(".cover video");
+  if(vid){
+    var pr = vid.play && vid.play();
+    if(pr && pr.catch) pr.catch(function(){});
+    vid.addEventListener("error", function(){
+      if(window.console) console.warn("[card] فيديو الغلاف ما تلقاش:", C.cover);
+      vid.parentNode.className += " empty";
+    });
+  }
 }
-
+​
 /* ظهور الأقسام تدريجياً عند التمرير */
 function observeReveals(){
   var items = document.querySelectorAll(".reveal");
@@ -465,7 +586,7 @@ function observeReveals(){
   }, { rootMargin: "0px 0px -8% 0px", threshold: 0.06 });
   items.forEach(function(el){ io.observe(el); });
 }
-
+​
 function bind(){
   document.querySelectorAll(".langs button").forEach(function(b){
     b.addEventListener("click", function(){
@@ -475,12 +596,12 @@ function bind(){
     });
   });
   document.querySelectorAll(".gallery button").forEach(function(b){
-    b.addEventListener("click", function(){ openLb(b.getAttribute("data-img")); });
+    b.addEventListener("click", function(){ openLb((b.querySelector("img")||{}).currentSrc || (b.querySelector("img")||{}).src); });
   });
   document.getElementById("vcf").addEventListener("click", saveContact);
   document.getElementById("shr").addEventListener("click", shareCard);
 }
-
+​
 /* --- حفظ جهة الاتصال (ملف vCard) --- */
 function saveContact(){
   var v = C.vcard || {}, fn = t(C.name);
@@ -506,7 +627,7 @@ function saveContact(){
   lines.push("URL;TYPE=card:" + location.href);
   lines.push("NOTE:" + t(C.role));
   lines.push("END:VCARD");
-
+​
   var blob = new Blob([lines.join("\r\n")], { type: "text/vcard;charset=utf-8" });
   var a = document.createElement("a");
   a.href = URL.createObjectURL(blob);
@@ -515,28 +636,28 @@ function saveContact(){
   a.click();
   setTimeout(function(){ URL.revokeObjectURL(a.href); a.remove(); }, 1200);
 }
-
+​
 /* --- مشاركة --- */
 function shareCard(){
   var d = { title: t(C.name), text: t(C.role), url: location.href };
   if(navigator.share){ navigator.share(d).catch(function(){}); return; }
   if(navigator.clipboard){ navigator.clipboard.writeText(location.href).then(function(){ toast(UI[lang].copied); }); }
 }
-
+​
 /* --- المعرض المكبّر --- */
 var lb = document.getElementById("lb"), lbi = document.getElementById("lbi");
 function openLb(src){ lbi.src = src; lb.classList.add("on"); }
 function closeLb(){ lb.classList.remove("on"); lbi.src = ""; }
 lb.addEventListener("click", closeLb);
 document.addEventListener("keydown", function(e){ if(e.key === "Escape") closeLb(); });
-
+​
 /* --- تنبيه --- */
 var tEl = document.getElementById("toast"), tTimer;
 function toast(msg){
   tEl.textContent = msg; tEl.classList.add("on");
   clearTimeout(tTimer); tTimer = setTimeout(function(){ tEl.classList.remove("on"); }, 2200);
 }
-
+​
 /* --- إقلاع --- */
 if(C.accent){
   document.documentElement.style.setProperty("--accent", C.accent);
@@ -548,3 +669,4 @@ render();
 </script>
 </body>
 </html>
+​
