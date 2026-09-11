@@ -18,10 +18,9 @@
 <meta property="og:type" content="website">
 <meta property="og:title" content="El Kholty Decor — ديكور و أثاث · طنجة">
 <meta property="og:description" content="الأثاث والديكور الداخلي بطنجة — WhatsApp، Instagram، Threads، TikTok، Facebook والموقع في بطاقة واحدة.">
-<!-- ضع هنا رابط الصورة كاملاً بعد رفع المجلد على GitHub Pages -->
-<meta property="og:image" content="https://USERNAME.github.io/nfc4all/clients/elkholty-decor/img/cover.png">
-<link rel="icon" href="img/logo.png">
-<link rel="apple-touch-icon" href="img/logo.png">
+<meta property="og:image" content="https://USERNAME.github.io/nfc4all/clients/elkholty-decor/cover.png">
+<link rel="icon" href="logo.png">
+<link rel="apple-touch-icon" href="logo.png">
 <!-- ▲▲ نهاية منطقة التعديل 1 ▲▲ -->
 
 <script>
@@ -33,8 +32,8 @@ var CARD = {
 
   /* --- الهوية البصرية --- */
   accent   : "#B0762C",          // لون العميل الأساسي (نحاسي/ذهبي مأخوذ من البطاقة المطبوعة)
-  cover    : "img/cover.png",    // صورة الغلاف (عرضية 1200×600)
-  logo     : "img/logo.png",     // الشعار (مربعة 400×400)
+  cover    : "cover.png",        // صورة الغلاف (عرضية 1200×600) — في نفس مجلد index.html
+  logo     : "logo.png",         // الشعار (مربعة 400×400) — في نفس المجلد
   logoShape: "square",           // "square" للمحلات · "circle" للأشخاص
 
   /* --- الحركة --- */
@@ -86,8 +85,9 @@ var CARD = {
     { label:{ ar:"استشارة و تنفيذ من الفكرة حتى التسليم", fr:"Conseil & réalisation clé en main", en:"Consultation & turnkey delivery" } }
   ],
 
-  /* --- معرض الأعمال (3 أو 6 صور مربعة) --- */
-  gallery: [ "img/work1.png", "img/work2.jfif", "img/work3.jpeg" ],
+  /* --- معرض الأعمال — 4 صور في نفس مجلد index.html ---
+     لحذف صورة: امسح سطرها · لتغيير الترتيب: حرّك الأسطر --- */
+  gallery: [ "img1.png", "img2.png", "img3.png", "img4.png" ],
 
   /* --- أوقات العمل --- */
   hours: [
@@ -204,10 +204,12 @@ html[dir="ltr"] .sec h2{letter-spacing:.09em;text-transform:uppercase}
 .panel .t{font-weight:600;white-space:nowrap;font-variant-numeric:tabular-nums}
 .addr{display:flex;align-items:flex-start;gap:10px;margin-top:12px;font-size:15px;color:var(--muted);text-decoration:none}
 .addr svg{width:19px;height:19px;flex:0 0 19px;color:var(--accent);margin-top:2px}
-.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:7px}
-.gallery button{padding:0;border:0;background:var(--soft2);border-radius:10px;overflow:hidden;aspect-ratio:1;cursor:pointer;display:block;transition:transform .2s ease}
-.gallery button:active{transform:scale(.97)}
-.gallery img{width:100%;height:100%;object-fit:cover;display:block}
+
+/* ---- معرض بصور كبيرة — صورة واحدة في كل صف ---- */
+.gallery{display:grid;grid-template-columns:1fr;gap:14px}
+.gallery button{padding:0;border:0;background:var(--soft2);border-radius:16px;overflow:hidden;cursor:pointer;display:block;width:100%;box-shadow:var(--btn-shadow);transition:transform .25s ease;-webkit-tap-highlight-color:transparent}
+.gallery button:active{transform:scale(.985)}
+.gallery img{width:100%;height:auto;display:block}
 
 /* ---- المشاركة والتذييل ---- */
 .share{display:flex;align-items:center;justify-content:center;gap:9px;width:100%;min-height:50px;margin-top:8px;border:1px solid var(--border);border-radius:12px;background:transparent;color:var(--text);font:600 15px/1 inherit;cursor:pointer;font-family:inherit;transition:transform .18s ease}
@@ -249,6 +251,12 @@ html[dir="ltr"] .sec h2{letter-spacing:.09em;text-transform:uppercase}
 .anim .reveal{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s cubic-bezier(.22,.68,.32,1)}
 .anim .reveal.in{opacity:1;transform:none}
 
+/* ظهور أنعم لصور المعرض مع تقريب خفيف يهدأ تدريجياً */
+.anim .gallery .reveal{opacity:0;transform:translateY(30px) scale(.97);transition:opacity .8s ease,transform .9s cubic-bezier(.22,.68,.32,1)}
+.anim .gallery .reveal.in{opacity:1;transform:none}
+.anim .gallery .reveal img{transform:scale(1.06);transition:transform 1.3s cubic-bezier(.2,.7,.3,1)}
+.anim .gallery .reveal.in img{transform:none}
+
 /* تبديل اللغة بانتقال ناعم بدل قفزة */
 .swap{animation:fadeSwap .34s ease both}
 
@@ -256,6 +264,7 @@ html[dir="ltr"] .sec h2{letter-spacing:.09em;text-transform:uppercase}
   *{transition:none!important}
   .anim .rise,.anim .avatar,.anim .cover>img,.swap{animation:none!important;opacity:1!important;transform:none!important}
   .anim .reveal{opacity:1!important;transform:none!important;transition:none!important}
+  .anim .gallery .reveal,.anim .gallery .reveal img{opacity:1!important;transform:none!important;transition:none!important}
   .anim .action.wa::after,.anim .btn::after{animation:none!important;display:none!important}
 }
 </style>
@@ -334,6 +343,8 @@ function esc(s){ return String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").rep
 function riseAttr(delay){ return MOTION ? ' class="rise" style="--d:'+delay+'ms"' : ''; }
 function riseOn(cls, delay){ return MOTION ? ' class="'+cls+' rise" style="--d:'+delay+'ms"' : ' class="'+cls+'"'; }
 function revealOn(cls){ return MOTION ? ' class="'+cls+' reveal"' : ' class="'+cls+'"'; }
+/* يسمح بأسماء ملفات فيها مسافات أو أقواس أو حروف عربية */
+function srcU(p){ return esc(encodeURI(String(p))); }
 
 function render(){
   var u = UI[lang], html = "";
@@ -343,7 +354,7 @@ function render(){
 
   /* الغلاف + مبدّل اللغة */
   html += '<div class="cover">';
-  if(C.cover) html += '<img src="'+esc(C.cover)+'" alt="" fetchpriority="high">';
+  if(C.cover) html += '<img src="'+srcU(C.cover)+'" alt="" fetchpriority="high">';
   html += '<div class="langs" role="group" aria-label="Language">';
   LANGS.forEach(function(l){
     html += '<button type="button" data-lang="'+l+'" aria-pressed="'+(l===lang)+'" lang="'+l+'">'+LABELS[l]+'</button>';
@@ -353,7 +364,7 @@ function render(){
   /* الرأس */
   html += '<div class="head">';
   var shape = C.logoShape === "circle" ? " circle" : "";
-  if(C.logo) html += '<img class="avatar'+shape+'" src="'+esc(C.logo)+'" alt="">';
+  if(C.logo) html += '<img class="avatar'+shape+'" src="'+srcU(C.logo)+'" alt="">';
   else       html += '<div class="avatar mono'+shape+'">'+esc(t(C.name).trim().charAt(0))+'</div>';
   html += '<h1'+riseAttr(170)+'>'+esc(t(C.name))+'</h1>';
   if(t(C.role))    html += '<p'+riseOn("role",220)+'>'+esc(t(C.role))+'</p>';
@@ -399,11 +410,13 @@ function render(){
     html += '</div></section>';
   }
 
-  /* المعرض */
+  /* المعرض — صورة واحدة في كل صف */
   if(C.gallery && C.gallery.length){
     html += '<section'+revealOn("sec")+'><h2>'+esc(u.work)+'</h2><div class="gallery">';
-    C.gallery.forEach(function(g){
-      html += '<button type="button" data-img="'+esc(g)+'" aria-label="'+esc(u.work)+'"><img src="'+esc(g)+'" alt="" loading="lazy"></button>';
+    C.gallery.forEach(function(g, i){
+      var gc = MOTION ? ' class="reveal"' : '';
+      var eager = i < 2 ? '' : ' loading="lazy"';
+      html += '<button type="button"'+gc+' data-img="'+srcU(g)+'" aria-label="'+esc(u.work)+' '+(i+1)+'"><img src="'+srcU(g)+'" alt=""'+eager+' decoding="async"></button>';
     });
     html += '</div></section>';
   }
